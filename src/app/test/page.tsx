@@ -2,6 +2,7 @@
 import { Suspense } from "react";
 import { connection } from "next/server";
 import { db } from "@/prisma/db";
+import LoadingAnimation from "@/features/loader/loader";
 
 async function VoicesList() {
     await connection();
@@ -28,7 +29,7 @@ async function VoicesList() {
 export default function TestPage() {
     return (
         <div className="p-8">
-            <Suspense fallback={<p>Loading voices...</p>}>
+            <Suspense fallback={<LoadingAnimation />}>
                 <VoicesList />
             </Suspense>
         </div>

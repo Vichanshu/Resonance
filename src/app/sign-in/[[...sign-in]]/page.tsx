@@ -1,19 +1,20 @@
-import { OrganizationList } from "@clerk/nextjs";
+import { SignIn } from "@clerk/nextjs";
+import { Suspense } from "react";
+import LoadingAnimation from "@/features/loader/loader";
 
-export default function OrgSelectionPage() {
+export default function SignInPage() {
     return (
-        <div className="flex min-h-screen items-center justify-center bg-background">
-            <OrganizationList
-                hidePersonal
-                afterCreateOrganizationUrl="/"
-                afterSelectOrganizationUrl="/"
-                appearance={{
-                    elements: {
-                        rootBox: "mx-auto",
-                        card: "shadow-lg",
-                    },
-                }}
-            />
-        </div>
+        <Suspense fallback={<LoadingAnimation />}>
+            <div className="flex min-h-screen items-center justify-center bg-background">
+                <SignIn
+                    appearance={{
+                        elements: {
+                            rootBox: "mx-auto",
+                            card: "shadow-lg",
+                        },
+                    }}
+                />
+            </div>
+        </Suspense>
     );
-};
+}
