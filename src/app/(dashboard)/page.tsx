@@ -1,13 +1,6 @@
-import { SidebarTrigger } from "@/components/ui/sidebar"
+import { DashboardView } from "@/features/dashboard/view/dashboard-view";
 
 
-
-
-export default function Page() {
-    return (
-        <div>
-            <SidebarTrigger />
-            Page
-        </div>
-    )
+export default function Dashboard() {
+    return <DashboardView />
 }
