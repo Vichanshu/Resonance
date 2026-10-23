@@ -21,11 +21,11 @@ export function DashboardHeader() {
             </div>
 
             <div className="lg:flex items-center gap-3 hidden">
-                <Button variant="outline" size="sm" render={<Link href="mailto:business@codewithantonio.com" />}>
+                <Button variant="outline" size="sm" render={<Link href="mailto:vichanshu@gmail.com" />}>
                     <ThumbsUp />
                     <span className="hidden lg:block">Feedback</span>
                 </Button>
-                <Button variant="outline" size="sm" render={<Link href="mailto:business@codewithantonio.com" />}>
+                <Button variant="outline" size="sm" render={<Link href="mailto:vichanshu@gmail.com" />}>
                     <Headphones />
                     <span className="hidden lg:block">Need help?</span>
                 </Button>
